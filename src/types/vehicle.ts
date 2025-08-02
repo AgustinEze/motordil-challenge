@@ -85,6 +85,7 @@ export interface Vehicle {
   tradeIn: boolean;
   financing: boolean;
   warranty: boolean;
+  mechanical_warranty:boolean;
   id: string;
   seller: Seller;
   general: General;
