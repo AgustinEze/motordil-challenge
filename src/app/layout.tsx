@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex flex-col">
         <Header />
-        <Flex className=" pt-0 sm:pt-4 pb-24 px-4 sm:px-6 lg:px-20">
+        <Flex className=" pt-4 pb-24 px-4 sm:px-6 lg:px-20">
           {children}
         </Flex>
       </body>
