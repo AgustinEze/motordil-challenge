@@ -6,6 +6,11 @@ import { Vehicle } from "@/types/vehicle";
 import { useFakeFetch } from "@/helper/functions/fakeFetch";
 import { vehicles } from "@/mock/vehicles";
 import Image from "next/image";
+import TradeInBadge from "../atoms/TradeInBadge";
+import FinancingBadge from "../atoms/FinancingBadge";
+import MechanicalWarranty from "../atoms/MechanicalWarrantyBadge";
+import WarrantyBadge from "../atoms/WarrantyBadge";
+import MechanicalWarrantyBadge from "../atoms/MechanicalWarrantyBadge";
 
 interface CompareVehicleCardProps {
   selectOptions: Vehicle[]
@@ -58,7 +63,14 @@ const CompareVehicleCard = ({
               {vehicle.location}
             </span>
           </FlexCol>
-          
+          <FlexCol className="gap-4">
+            <TradeInBadge yes={vehicle.tradeIn}/>
+            <FinancingBadge yes={vehicle.financing}/>
+            <MechanicalWarrantyBadge yes={vehicle.mechanical_warranty}/>
+            <WarrantyBadge yes={vehicle.warranty}/>
+
+
+          </FlexCol>
         </FlexCol>
       )}
     </FlexCol>

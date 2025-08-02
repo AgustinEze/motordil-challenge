@@ -6,15 +6,15 @@ const TradeInBadge =  ({ yes }: { yes: boolean }) => {
   if (yes)
     return (
       <Flex className="gap-2">
-        <CheckCheckIcon />
-        <span className=" text-[#808080]">Acepta permuta</span>
+        <CheckCheckIcon size={16} color='#15A87C'/>
+        <span className="font-medium text-[10px] leading-[18px] text-[#808080]">Acepta permuta</span>
       </Flex>
     );
   return (
     <Flex className="gap-2">
-      <BanIcon />
+      <BanIcon   size={16} color="#EB3633" />
 
-      <span className=" text-[#808080]">No acepta permuta</span>
+      <span className="font-medium text-[10px] leading-[18px] text-[#808080]">No acepta permuta</span>
     </Flex>
   );
 };
