@@ -15,7 +15,7 @@ const CompareSection = () => {
   if (!data) return null;
 
   return (
-    <Flex className="gap-8 flex-wrap items-start">
+    <Flex className="justify-between flex-wrap items-start">
       {Array.from({ length: count }).map((_, index) => {
         const selectedIds = selections.filter((_, i) => i !== index); // exclude current
         const options = data?.filter(

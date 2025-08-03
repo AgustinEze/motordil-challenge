@@ -7,8 +7,8 @@ export const useCardCountByBreakpoint = () => {
   useEffect(() => {
     const update = () => {
       const width = window.innerWidth;
-      if (width >= 1660) setCount(4); 
-      else if (width >= 1281) setCount(3); 
+      if (width > 1600) setCount(4); 
+      else if (width >= 1280) setCount(3); 
       else setCount(2);
     };
 
