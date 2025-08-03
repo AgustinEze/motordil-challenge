@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useEffect, useState } from "react";
 
 export const useCardCountByBreakpoint = () => {
@@ -7,8 +7,7 @@ export const useCardCountByBreakpoint = () => {
   useEffect(() => {
     const update = () => {
       const width = window.innerWidth;
-      if (width > 1600) setCount(4); 
-      else if (width >= 1280) setCount(3); 
+      if (width >= 1280) setCount(3);
       else setCount(2);
     };
 

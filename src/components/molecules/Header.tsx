@@ -8,8 +8,8 @@ import Menu from "./Menu";
 
 const Header = () => {
   return (
-      <Flex className="sm:px-5 h-[72px] border-b-[1px] border-[#02040814] ">
-        <Flex className="px-4 sm:px-16 h-10 justify-between">
+      <Flex className="sm:px-5 h-[72px]  border-b-[1px] border-[#02040814] justify-center">
+        <Flex className="px-4 sm:px-16 h-10 justify-between max-w-[1280px]">
           <Logo />
           <Flex className="gap-12 h-10 max-w-fit">
             <Flex className="gap-2 h-10 hidden lg:flex max-w-fit">
