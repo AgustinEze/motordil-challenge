@@ -40,7 +40,7 @@ const CompareVehicleCard = ({
   }, [data, value]);
 
   return (
-    <FlexCol className="gap-4 sm:gap-10 max-w-[136px] sm:w-[352px]">
+    <FlexCol className="gap-4 sm:gap-10 max-w-[136px] sm:max-w-[352px]">
       <SelectCompareVehicle
         selectOptions={selectOptions}
         value={value}
@@ -71,13 +71,13 @@ const CompareVehicleCard = ({
             <MechanicalWarrantyBadge yes={vehicle.mechanical_warranty} />
             <WarrantyBadge yes={vehicle.warranty} />
           </FlexCol>
-          <Flex className="gap-4 w-[136px] sm:w-[352px]">
-            <Button className="border-[1px] border-[#F0F2F6] rounded hidden sm:inline px-4 py-2 bg-[#F0F2F6] w-[136px] sm:w-[352px]">
+          <Flex className="gap-4 w-[136px] sm:max-w-[352px]">
+            <Button className="border-[1px] border-[#F0F2F6] rounded hidden sm:inline px-4 py-2 bg-[#F0F2F6] ">
               <span className=" font-medium text-[16px] leading-[24px] text-center align-middle text-[#1E4787]">
                 Ver anuncio
               </span>
             </Button>
-            <Button className="border-[1px] border-[#1E4787] rounded  px-4 py-2 bg-[#1E4787] w-[136px] sm:w-[352px]">
+            <Button className="border-[1px] border-[#1E4787] rounded  px-4 py-2 bg-[#1E4787] ">
               <span className=" font-medium text-[16px] hidden sm:inline leading-[24px] text-center align-middle  text-[#FFFFFF]">
                 Contactar al vendedor
               </span>
