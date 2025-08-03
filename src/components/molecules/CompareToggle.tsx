@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { useCallback } from "react";
+import { Suspense, useCallback } from "react";
 import Flex from "../atoms/Flex";
 import FlexCol from "../atoms/FlexCol";
 import { Switch } from "../ui/switch";
@@ -36,7 +36,10 @@ const CompareToggle = () => {
           </span>
         </Flex>
       </FlexCol>
+      <Suspense fallback={<>Cargando</>}>
+        
       <Switch checked={toggleValue} onCheckedChange={handleToggleChange} />
+      </Suspense>
     </Flex>
   );
 };
