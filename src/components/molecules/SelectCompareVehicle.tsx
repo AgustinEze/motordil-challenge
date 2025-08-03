@@ -23,16 +23,16 @@ const SelectCompareVehicle = ({
   const selectedVehicle = selectOptions.find((option) => option.id === value);
   return (
     <Select
-      value={value ?? undefined}
+      value={value ?? ''}
       onValueChange={(val) => onChange(val || null)}
     >
-      <SelectTrigger className="w-full">
+      <SelectTrigger className="w-[136px] sm:w-[352px]">
         <SelectValue
           placeholder="Seleccione un vehículo"
           // Solo mostramos el nombre del vehículo seleccionado
           className="text-left"
         >
-          {selectedVehicle?.vehicle}
+          {selectedVehicle?.vehicle ?? ''}
         </SelectValue>
       </SelectTrigger>
       <SelectContent>

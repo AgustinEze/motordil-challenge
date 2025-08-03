@@ -17,7 +17,7 @@ const CompareSection = () => {
 
   
   return (
-    <Flex className="gap-8 flex-wrap">
+    <Flex className="gap-8 flex-wrap items-start">
       {Array.from({ length: count }).map((_, index) => {
         
             
