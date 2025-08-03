@@ -37,8 +37,7 @@ const CompareToggle = () => {
         </Flex>
       </FlexCol>
       <Suspense fallback={<>Cargando</>}>
-        
-      <Switch checked={toggleValue} onCheckedChange={handleToggleChange} />
+        <Switch checked={toggleValue} onCheckedChange={handleToggleChange} />
       </Suspense>
     </Flex>
   );
