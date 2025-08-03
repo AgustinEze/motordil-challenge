@@ -56,7 +56,7 @@ const CompareVehicleCard = ({
             alt="Car"
           />
 
-          <span className="font-medium text-[32px] leading-[28.8px] tracking-[2px]">{`${vehicle.price} ${vehicle.currency}`}</span>
+          <span className="font-medium sm:text-[32px] text-[14px] leading-[16px] tracking-[1px] sm:leading-[28.8px] sm:tracking-[2px] uppercase">{`${vehicle.price} ${vehicle.currency}`}</span>
           <FlexCol className="gap-2 font-medium text-[14px] leading-[21px] tracking-[0.1em] align-middle uppercase">
             <span className="">{vehicle.year}</span>
             <span className="">{vehicle.kilometers} KMS</span>
@@ -115,110 +115,124 @@ const CompareVehicleCard = ({
               }}
             />
             <AccordionDetails
-             title={"Seguridad"} 
-             headers={[
-              "Faros con regulación automática",
-              "Faros antinieblas traseros",
-              "Airbag",
-              "Control de estabilidad",
-              "Control de tracción",
-              "Tipo de tracción",
-              "Frenos ABS",
-              "Cierre centralizado de puertas",
-              "Tercera luz de freno LED",
-             ]}
-             contentMap={{
-              "Faros con regulación automática": vehicle.safety.autoHeadlights?"Si":'No',
-              "Faros antinieblas traseros": vehicle.safety.rearFogLights?"Si":'No',
-              Airbag: vehicle.safety.airbag?"Si":'No',
-              "Control de estabilidad": vehicle.safety.stabilityControl?"Si":'No',
-              "Control de tracción": vehicle.safety.tractionControl?"Si":'No',
-              "Tipo de tracción": vehicle.safety.tractionType,
-              "Frenos ABS": vehicle.safety.abs?"Si":'No',
-              "Cierre centralizado de puertas": vehicle.safety.centralLocking?"Si":'No',
-              "Tercera luz de freno LED": vehicle.safety.thirdBrakeLight?"Si":'No',
-             }}
-             />
-            <AccordionDetails 
-            title={"Prestaciones y mecanica"}
-            headers={[
-              "Motor",
-              "Transmisión",
-              "Defensa delantero",
-              "Cilindrada",
-              "Potencia",
-              "Aceleración",
-              "Valvulas por cilindro",
-              "Tipo de bateria",
-            ]}
-            contentMap={{
-              Motor: vehicle.performance.engine,
-              Transmisión: vehicle.performance.transmission,
-              "Defensa delantero": vehicle.performance.frontBumper?"Si":'No',
-              Cilindrada: vehicle.performance.displacement,
-              Potencia: vehicle.performance.power,
-              Aceleración: vehicle.performance.acceleration,
-              "Valvulas por cilindro": vehicle.performance.valvesPerCylinder,
-               "Tipo de bateria": vehicle.performance.battery,
-            }}
+              title={"Seguridad"}
+              headers={[
+                "Faros con regulación automática",
+                "Faros antinieblas traseros",
+                "Airbag",
+                "Control de estabilidad",
+                "Control de tracción",
+                "Tipo de tracción",
+                "Frenos ABS",
+                "Cierre centralizado de puertas",
+                "Tercera luz de freno LED",
+              ]}
+              contentMap={{
+                "Faros con regulación automática": vehicle.safety.autoHeadlights
+                  ? "Si"
+                  : "No",
+                "Faros antinieblas traseros": vehicle.safety.rearFogLights
+                  ? "Si"
+                  : "No",
+                Airbag: vehicle.safety.airbag ? "Si" : "No",
+                "Control de estabilidad": vehicle.safety.stabilityControl
+                  ? "Si"
+                  : "No",
+                "Control de tracción": vehicle.safety.tractionControl
+                  ? "Si"
+                  : "No",
+                "Tipo de tracción": vehicle.safety.tractionType,
+                "Frenos ABS": vehicle.safety.abs ? "Si" : "No",
+                "Cierre centralizado de puertas": vehicle.safety.centralLocking
+                  ? "Si"
+                  : "No",
+                "Tercera luz de freno LED": vehicle.safety.thirdBrakeLight
+                  ? "Si"
+                  : "No",
+              }}
             />
-            <AccordionDetails 
-            title={"Rendimiento y dimensiones"} 
-            headers={[
-              "Largo x Alto x Ancho",
-              "Distancia entre ejes",
-              "Asientos",
-              "Puertas",
-              "Capacidad de tanque",
-              "Consumo medio",
-              "Aceleración",
-              "Velocidad máxima",
-            ]}
-            contentMap={{
-              "Largo x Alto x Ancho": `${vehicle.dimensions.length} mm x ${vehicle.dimensions.height} mm x ${vehicle.dimensions.width} mm`,
-              "Distancia entre ejes": vehicle.dimensions.wheelbase,
-              Asientos: vehicle.dimensions.seats,
-              Puertas: vehicle.dimensions.doors,
-              "Capacidad de tanque": vehicle.dimensions.tankCapacity,
-              "Consumo medio": vehicle.dimensions.averageConsumption,
-              Aceleración: vehicle.dimensions.acceleration,
-              "Velocidad máxima": vehicle.dimensions.topSpeed,
-            }}
+            <AccordionDetails
+              title={"Prestaciones y mecanica"}
+              headers={[
+                "Motor",
+                "Transmisión",
+                "Defensa delantero",
+                "Cilindrada",
+                "Potencia",
+                "Aceleración",
+                "Valvulas por cilindro",
+                "Tipo de bateria",
+              ]}
+              contentMap={{
+                Motor: vehicle.performance.engine,
+                Transmisión: vehicle.performance.transmission,
+                "Defensa delantero": vehicle.performance.frontBumper
+                  ? "Si"
+                  : "No",
+                Cilindrada: vehicle.performance.displacement,
+                Potencia: vehicle.performance.power,
+                Aceleración: vehicle.performance.acceleration,
+                "Valvulas por cilindro": vehicle.performance.valvesPerCylinder,
+                "Tipo de bateria": vehicle.performance.battery,
+              }}
             />
-            <AccordionDetails 
-            title={"Equipamiento destacado"} 
-            headers={[
-              "Cámara trasera",
-              "Alarma",
-              "Llantas de aluminio",
-              "Bluetooth",
-              "Radio",
-              "DVD",
-              "Porta equipaje",
-              "Cargador USB",
-              "Computadora de viaje",
-              "Control de cruza",
-              "Aire acondicionado",
-              "Ventanas eléctricas",
-              "Desempañador trasero",
-              "MP3",
-            ]}
-            contentMap={{
-              "Cámara trasera": vehicle.equipment.rearCamera,
-              Alarma: vehicle.equipment.alarm,
-              "Llantas de aluminio": vehicle.equipment.alloyWheels,
-              Bluetooth: vehicle.equipment.bluetooth,
-              Radio: vehicle.equipment.radio,
-              DVD: vehicle.equipment.dvd,
-              "Porta equipaje": vehicle.equipment.cupHolder,
-              "Cargador USB": vehicle.equipment.usbCharger,
-              "Computadora de viaje": vehicle.equipment.tripComputer,
-              "Control de cruza": vehicle.equipment.cruiseControl,
-              "Aire acondicionado": vehicle.equipment.airConditioning,
-              "Ventanas eléctricas": vehicle.equipment.electricWindows,
-              "Desempañador trasero": vehicle.equipment.rearDefogger,
-              MP3: vehicle.equipment.mp3,
-            }}
+            <AccordionDetails
+              title={"Rendimiento y dimensiones"}
+              headers={[
+                "Largo x Alto x Ancho",
+                "Distancia entre ejes",
+                "Asientos",
+                "Puertas",
+                "Capacidad de tanque",
+                "Consumo medio",
+                "Aceleración",
+                "Velocidad máxima",
+              ]}
+              contentMap={{
+                "Largo x Alto x Ancho": `${vehicle.dimensions.length} mm x ${vehicle.dimensions.height} mm x ${vehicle.dimensions.width} mm`,
+                "Distancia entre ejes": vehicle.dimensions.wheelbase,
+                Asientos: vehicle.dimensions.seats,
+                Puertas: vehicle.dimensions.doors,
+                "Capacidad de tanque": vehicle.dimensions.tankCapacity,
+                "Consumo medio": vehicle.dimensions.averageConsumption,
+                Aceleración: vehicle.dimensions.acceleration,
+                "Velocidad máxima": vehicle.dimensions.topSpeed,
+              }}
+            />
+            <AccordionDetails
+              title={"Equipamiento destacado"}
+              headers={[
+                "Cámara trasera",
+                "Alarma",
+                "Llantas de aluminio",
+                "Bluetooth",
+                "Radio",
+                "DVD",
+                "Porta equipaje",
+                "Cargador USB",
+                "Computadora de viaje",
+                "Control de cruza",
+                "Aire acondicionado",
+                "Ventanas eléctricas",
+                "Desempañador trasero",
+                "MP3",
+              ]}
+              contentMap={{
+                "Cámara trasera": vehicle.equipment.rearCamera,
+                Alarma: vehicle.equipment.alarm,
+                "Llantas de aluminio": vehicle.equipment.alloyWheels,
+                Bluetooth: vehicle.equipment.bluetooth,
+                Radio: vehicle.equipment.radio,
+                DVD: vehicle.equipment.dvd,
+                "Porta equipaje": vehicle.equipment.cupHolder,
+                "Cargador USB": vehicle.equipment.usbCharger,
+                "Computadora de viaje": vehicle.equipment.tripComputer,
+                "Control de cruza": vehicle.equipment.cruiseControl,
+                "Aire acondicionado": vehicle.equipment.airConditioning,
+                "Ventanas eléctricas": vehicle.equipment.electricWindows,
+                "Desempañador trasero": vehicle.equipment.rearDefogger,
+                MP3: vehicle.equipment.mp3,
+              }}
             />
           </FlexCol>
         </FlexCol>
