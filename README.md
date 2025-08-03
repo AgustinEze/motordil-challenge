@@ -9,3 +9,11 @@ Este proyecto fue creado con [`create-next-app`](https://nextjs.org/docs/app/api
 ```bash
 git clone https://github.com/AgustinEze/motordil-challenge.git
 cd motordil-challenge
+npm install
+npm run dev
+```
+
+### 2. Navegar a /compare o hace clic en Compara modelos
+
+### 3. Seleccionar los vehiculos  a comparar
+
