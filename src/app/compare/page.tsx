@@ -8,7 +8,7 @@ import React, { Suspense } from "react";
 export default function Compare() {
   return (
     <Suspense>
-      <FlexCol className="gap-6 ">
+      <FlexCol className="gap-6 justify-center">
         <CompareHeaderTitle />
         <CompareToggle />
         <CompareSection />
