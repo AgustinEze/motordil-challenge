@@ -86,7 +86,7 @@ const CompareVehicleCard = ({
               </span>
             </Button>
           </Flex>
-          <FlexCol className="max-w-[136px] sm:w-[352px]">
+          <FlexCol className="max-w-[136px] sm:max-w-[352px]">
             <AccordionDetails
               title={"General"}
               headers={[

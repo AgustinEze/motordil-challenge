@@ -5,7 +5,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
-import Flex from "./Flex";
 import FlexCol from "./FlexCol";
 
 interface AccordionDetailsProps {
@@ -20,12 +19,12 @@ const AccordionDetails = ({
   contentMap,
 }: AccordionDetailsProps) => {
   return (
-    <Accordion type="single" collapsible className="max-w-[136px] sm:w-[352px]">
+    <Accordion type="single" collapsible className="max-w-[136px] sm:max-w-[352px]">
       <AccordionItem value="main-item">
         <AccordionTrigger className="px-4 py-2 sm:font-medium text-left text-[12px] leading-[19.2px] tracking-[0]">
           {title}
         </AccordionTrigger>
-        <AccordionContent className="p-0 max-w-[136px] sm:w-[352px]">
+        <AccordionContent className="p-0 max-w-[136px] sm:max-w-[352px]">
           {headers?.map((header, index) => (
             <FlexCol
               key={header}
